@@ -1,13 +1,13 @@
 class Solution {
     public boolean solution(int x) {
         boolean answer = true;
-        int result = 0;
-        int num = x;
-        while (x > 0){
-            result += x % 10;
-            x /= 10;
+        String[] s = String.valueOf(x).split("");
+        int sum = 0;
+        for(String str : s){
+            sum += Integer.parseInt(str);
         }
-        if(num % result != 0){
+        
+        if(x % sum != 0){
             answer = false;
         }
         return answer;
