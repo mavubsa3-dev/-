@@ -3,13 +3,11 @@ class Solution {
         boolean answer = false;
         if(s.length() == 4 || s.length() == 6){
             for(int i=0; i<s.length(); i++){
-                    char c = s.charAt(i);
-                    if(c < '0' || c > '9'){
+                    if(!Character.isDigit(s.charAt(i))){
                         answer = false;
                         break;
-                    }else{
-                        answer = true;
                     }
+                answer = true;
                 }
             }
         return answer;
